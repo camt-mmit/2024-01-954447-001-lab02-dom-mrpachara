@@ -1,0 +1,86 @@
+:root {
+  --app-font: sans-serif;
+  --app-font-size: 16px;
+
+  --app-icon-fill: 1;
+
+  --app-primary-color: #0000ff;
+  --app-warn-color: #ff0000;
+
+  font-family: var(--app-font);
+  font-size: var(--app-font-size);
+}
+
+.app-cl-primary {
+  color: var(--app-primary-color);
+}
+
+.app-cl-warn {
+  color: var(--app-warn-color);
+}
+
+:is(.app-cl-primary, .app-cl-warn):disabled {
+  opacity: 0.25;
+}
+
+.app-cl-number {
+  font-family: monospace;
+  font-size: var(--app-font-size);
+  text-align: right;
+}
+
+.app-cl-cmd {
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+  font-weight: bold;
+
+  & > * {
+    pointer-events: none;
+  }
+}
+
+.app-cmp-input {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  label {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    align-items: baseline;
+
+    & > * {
+      box-sizing: border-box;
+    }
+  }
+}
+
+.app-elem-title {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 10ch;
+
+  .app-elem-title-no {
+    flex: 1 0 auto;
+    text-align: right;
+  }
+}
+
+.app-elem-input,
+.app-elem-result {
+  width: 30ch;
+}
+.app-elem-input {
+  height: 100%;
+}
+.app-elem-result {
+  display: inline-block;
+  padding-right: calc(2ch + 1px);
+  font-weight: bold;
+  text-decoration: underline double;
+}
