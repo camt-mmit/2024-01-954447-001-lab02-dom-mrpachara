@@ -58,6 +58,28 @@ body {
   }
 }
 
+/* application */
+.app-cmp-main {
+  width: min(480px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-cmp-main-actions-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+
+  position: sticky;
+  top: 0px;
+  height: var(--app-header-height);
+  background-color: var(--app-background-color);
+  z-index: 9999;
+}
+
+/* input */
 .app-cmp-inputs-list {
   margin-top: 16px;
 }
@@ -110,26 +132,6 @@ body {
 }
 
 /* Section */
-.app-cmp-main {
-  width: min(480px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.app-cmp-main-actions-bar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 8px;
-
-  position: sticky;
-  top: 0px;
-  height: var(--app-header-height);
-  background-color: var(--app-background-color);
-  z-index: 9999;
-}
-
 .app-cmp-sections-list {
   display: flex;
   flex-direction: column;
